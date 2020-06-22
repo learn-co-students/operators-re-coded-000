@@ -1,8 +1,8 @@
 
 describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
-
   describe "#unsafe?" do
+
     it 'returns true if speed is greater than 60' do
       answer = unsafe?(79)
       expect(answer).to eq(true)
@@ -16,9 +16,9 @@ describe "Operations" do
     it 'returns false if the speed is between 40 and 60' do
       answer = unsafe?(50)
       expect(answer).to eq(false)
+
     end
   end
-
   describe "#not_safe?" do
     it 'returns true if speed is greater than 60' do
       answer = not_safe?(79)
@@ -41,5 +41,5 @@ describe "Operations" do
       expect(match).to include("?")
     end
   end
-  
+
 end
